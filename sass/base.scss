@@ -1,0 +1,27 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	font-family: Raleway;
+}
+
+body {
+	--bg-color: #e9f3f4;
+	--bg-color: #f0f1f1;
+	background-color: var(--bg-color);
+}
+
+.site-main {
+	min-width: 1335px;
+	padding: 70px 0 100px;
+	display: flex;
+	justify-content: center;
+}

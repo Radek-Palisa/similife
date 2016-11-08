@@ -1,0 +1,45 @@
+/* ------------------------------------
+ *  RIGHT SIDEBAR
+ * --------------------------------- */
+.right-sidebar {
+	width: 420px;
+	padding: 0 30px;
+}
+
+.right-sidebar section {
+	height: 500px;
+	background-color: #fff;
+	text-align: center;
+	padding: 30px;
+	margin-bottom: 20px;
+    /*border: 1px solid rgba(144, 143, 143, 0.23);*/
+    /*box-shadow: 1px 1px 31px rgba(0, 0, 0, 0.2);*/
+}
+
+.profile-pic {
+	width: 180px;
+	height: 180px;
+	margin: 30px auto;
+	border-radius: 50%;
+	background: url('img/profile.png') center / 140% no-repeat;
+}
+
+.right-sidebar section h3 {
+	font-size: 1em;
+}
+
+.right-sidebar section p {
+	padding: 0 15px;
+	font-size: 15px;
+	text-align: left;
+	line-height: 1.6;
+}
+
+.about a {
+	display: inline-block;
+	padding-bottom: 1px;
+	border-bottom: 1px solid #777;
+	text-decoration: none;
+	color: #777;
+	font-size: 14px;
+}

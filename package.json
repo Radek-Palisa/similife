@@ -1,0 +1,27 @@
+{
+  "name": "similife",
+  "version": "1.0.0",
+  "description": "blog",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Radek-Palisa/similife.git"
+  },
+  "author": "Radek Palisa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Radek-Palisa/similife/issues"
+  },
+  "homepage": "https://github.com/Radek-Palisa/similife#readme",
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  },
+  "dependencies": {
+    "normalize-scss": "^6.0.0"
+  }
+}
