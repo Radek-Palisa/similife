@@ -19,27 +19,27 @@
 	background-position: center center;
 	background-clip: content-box;
 	transition: all 0.3s ease-in-out;
-}
 
-	.thumb-1 {
-		background-image: url('img/thumb.jpg');
+	&-1 {
+		background-image: url('./img/thumb.jpg');
 	}
 
-	.thumb-2 {
+	&-2 {
 		background-image: url('img/thumb2.jpg');	
 	}
 
-	.thumb-3 {
+	&-3 {
 		background-image: url('img/thumb3.jpg');
 	}
 
-	.thumb-4 {
+	&-4 {
 		background-image: url('img/thumb4.jpg');	
 	}
 
-	.thumb-5 {
+	&-5 {
 		background-image: url('img/thumb5.jpg');	
 	}
+}
 
 .thumb::before {
 	content: '';
