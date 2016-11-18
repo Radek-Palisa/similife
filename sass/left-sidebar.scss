@@ -23,6 +23,7 @@
 }
 
 .secondary-nav ul {
+	margin: 1em 0 50px 0;
 	list-style: none;
 	padding-left: 20px;
 	text-align: right;
@@ -35,7 +36,6 @@
 /* RUBRIKY */
 
 .secondary-nav__rubriky {
-	margin-bottom: 50px;
 
 	li {
 		position: relative;
@@ -70,7 +70,7 @@
 	margin: 0;
 	padding: 0;
 	border: 2px solid rgba(51, 51, 51, 0.51);	
-	//background: #fff url('./img/Arrow_Forward.svg') center / 50% no-repeat;
+	background: #fff url('./img/Arrow_Forward.svg') center / 50% no-repeat;
 	-webkit-appearance: none;
 	outline: none;
 	cursor: pointer;
@@ -83,17 +83,11 @@
 
 /* STITKY */
 
-	.secondary-nav__tags {
-		margin-bottom: 50px;
-	}
+.secondary-nav__tags li {
+	display: inline-block;
+	transition: all 0.3s ease-in-out;
 
-	.secondary-nav__tags li {
-		display: inline-block;
-		transition: all 0.3s ease-in-out;
-
-	}
-
-	.secondary-nav__tags li a {
+	a {
 		position: relative;
 		z-index: 2;
 		padding: 3px 15px;
@@ -105,17 +99,17 @@
 		backface-visibility: hidden;
 	}
 
-	.secondary-nav__tags li a:hover::after {
+	a:hover::after {
 		transform: scale(1.2) translateZ(0);
 		transition: all 0.2s cubic-bezier(0.42, 0, 0.29, 2.01);
 		z-index: -1;
 	}
 
-	.secondary-nav__tags li a:hover {
+	a:hover {
 		z-index: 3;
 	}
 
-	.secondary-nav__tags li a::after {
+	a::after {
 		content: '';
 		position: absolute;
 		top: 0; left: 0;
@@ -126,6 +120,7 @@
 		border: 1px solid #76cede;
 		transition: all 0.2s ease-in-out;
 	}
+}
 
 /* SOCIAL MEDIA */
 	ul.secondary-nav__social-media {

@@ -3,11 +3,72 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Similife</title>
-	<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Lily+Script+One|Dancing+Script:400,700&amp;subset=latin-ext" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
+<header class="site-header" id="site-header">
+	<div class="site-header--position">
+		<div class="container banner">
+			<nav class="site-navigation">
+				<span>Blog</span>
+				<span>YouTube</span>
+				<span>Partneři</span>
+				<span>O mně</span>
+			</nav>
+			<div class="site-branding">
+				<h1 class="site-title"><a href="#0">Similife</a></h1>
+				<p class="banner-text">Blog / YouTube / Lifestyle</p>
+			</div>
+		</div>
+	</div>
+	<div class="change-images">
+		<span>Změn fotku</span>
+		<span onclick="changeToImgA()">1</span>
+		<span onclick="changeToImgB()">2</span>
+		<span onclick="changeToImgC()">3</span>
+		<span onclick="changeToImgD()">4</span>
+	</div>
+</header>
+
+<section class="social-following">
+	<div class="container">
+		<span class="promo-social promo-social-fb">3,090 se to líbí</span>
+		<span class="promo-social promo-social-youtube">15,614 mě odebírá</span>
+		<span class="promo-social promo-social-insta">3,572 mě sleduje</span>
+		<span class="promo-social promo-social-snapchat">500 mě sleduje</span>
+	</div>
+</section>
+<section class="featured">
+	<h3>featured</h3>
+	<div class="container">
+		<article>
+			<div class="featured-thumb featured-thumb-2"></div>
+			<h4>Video z dobrovolnických prací</h4>
+		</article>
+		<article>
+			<div class="featured-thumb featured-thumb-3"></div>
+			<h4>Proč jsem přestala zpeněžovat YouTube videa</h4>
+		</article>
+		<article>
+			<div class="featured-thumb featured-thumb-4"></div>
+			<h4>Když se to se*re tak se to...aneb šikovná Simi rozflákala iphone</h4>
+		</article>
+		<article>
+			<div class="featured-thumb featured-thumb-5"></div>
+			<h4>Jak často a čím si čistím zuby?</h4>
+		</article>
+	</div>
+
+</section>
 <main class="site-main">
+	<section class="search-form">
+		<div class="container">
+			<input type="text" name="search" placeholder="Co vás zajímá?">
+		</div>
+	</section>
 	<aside class="left-sidebar">
 		<section class="secondary-nav">
 			<p>Rubriky</p>
@@ -150,10 +211,13 @@
 			<p>Ing. Simona Brabcová, instruktorka Body&Mind a rekvalifikovaná výživová poradkyně. Neoficiálně Simi, která miluje zdravý životní styl, cvičení a inspirující lidi okolo sebe ♥</p>
 			<a href="#0">více o mně</a>
 		</section>
-		<section class="tags"></section>
+		<section class="tags">
+			<h3>Archív</h3>
+		</section>
 		<section class="adverts"></section>
 	</aside>
 
+	<script src="./scripts/jquery-3.1.1.min.js"></script>
 	<script src="./scripts/custom.js"></script>
 </main>
 </body>

@@ -76,24 +76,10 @@
 	position: relative;
 	width: 580px;
 	background-color: white;
-	padding: 20px 90px 30px;
+	padding: 25px 90px 30px;
 	transition: all 0.3s ease-in-out;
     /*border: 1px solid rgba(144, 143, 143, 0.23);*/
     /*box-shadow: 1px 1px 31px rgba(0, 0, 0, 0.2);*/
-}
-
-.post-card::after {
-	z-index: -1;
-	content: '';
-	position: absolute;
-	top: -7%;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 190%;
-	height: 200px;
-	background-color: white;
-	border-radius: 50%;
-    /*box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.09);*/
 }
 
 .post-title {
