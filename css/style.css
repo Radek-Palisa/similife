@@ -700,6 +700,15 @@ object {
 .gallery-caption {
   display: block; }
 
+@font-face {
+  font-family: 'HyperPunchPink';
+  src: url("./fonts/HyperPunchPink.ttf") format("truetype");
+  /* Safari, Android, iOS */ }
+
+@font-face {
+  font-family: 'Porceleina';
+  src: url("./fonts/porceleina.otf"); }
+
 html {
   box-sizing: border-box; }
 
@@ -715,7 +724,7 @@ body {
 .site-main {
   z-index: 3;
   position: relative;
-  min-width: 1335px;
+  min-width: 1220px;
   padding: 0 0 100px;
   display: flex;
   justify-content: center;
@@ -726,8 +735,11 @@ body {
   background-color: var(--bg-color); }
 
 .container {
-  width: 1215px;
+  max-width: 1220px;
   margin: 0 auto; }
+
+.posts {
+  margin-left: 160px; }
 
 .site-header {
   position: fixed;
@@ -780,7 +792,9 @@ body {
       text-decoration: none;
       font-size: 1.4em;
       outline: 0;
-      text-shadow: 0px 0px 24px #fbf5e1; }
+      text-shadow: 0px 0px 24px #fbf5e1;
+      font-family: 'HyperPunchPink', serif;
+      font-family: 'Porceleina', serif; }
   .site-branding .banner-text {
     margin: 0;
     font-size: 2em;
@@ -908,7 +922,7 @@ body {
   padding: 30px 0 10px;
   text-align: right; }
   .search-form input {
-    margin-right: 1px;
+    margin-right: 54px;
     padding: 8px 20px;
     width: 0;
     background: white url("img/search.svg") right 10px center/20px auto no-repeat;
@@ -932,12 +946,13 @@ body {
  *  LEFT SIDEBAR
  * --------------------------------- */
 .left-sidebar {
-  padding-left: 30px;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  right: 0;
   color: #777;
   line-height: 2;
-  z-index: 100; }
-  .left-sidebar section {
-    width: 210px; }
+  z-index: -1; }
   .left-sidebar section p {
     margin-top: 0;
     margin-bottom: 0;
@@ -946,6 +961,9 @@ body {
     font-size: 15px;
     letter-spacing: 1.4px; }
 
+.secondary-nav {
+  width: 160px; }
+
 .secondary-nav ul {
   margin: 1em 0 50px 0;
   list-style: none;
@@ -953,6 +971,10 @@ body {
   text-align: right; }
   .secondary-nav ul a {
     text-decoration: none; }
+
+.left-sidebar--fixed-js {
+  position: fixed;
+  top: 20px; }
 
 /* RUBRIKY */
 .secondary-nav__rubriky li {
@@ -1024,13 +1046,22 @@ body {
     transition: all 0.2s ease-in-out; }
 
 /* SOCIAL MEDIA */
-ul.secondary-nav__social-media {
-  padding-left: 0; }
+.social-aside {
+  position: relative;
+  width: 30px; }
 
-.secondary-nav__social-media li {
+ul.social-aside__link-holder {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-left: 0;
+  list-style: none;
+  margin: 0; }
+
+.social-aside__link-holder li {
   margin-bottom: 10px; }
 
-.secondary-nav__social-media a {
+.social-aside__link-holder a {
   position: relative;
   overflow: hidden;
   display: inline-block;
@@ -1047,34 +1078,38 @@ ul.secondary-nav__social-media {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.45);
   transition: all 0.1s ease-in-out; }
 
-.secondary-nav__social-media a:hover {
+.social-aside__link-holder a:hover {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.45);
-  width: auto;
-  padding-left: 15px;
   transition: all 0.1s ease-in-out; }
 
-.secondary-nav__social-media li:first-of-type a {
+@media (min-width: 1420px) {
+  .social-aside__link-holder a:hover {
+    width: auto;
+    padding-left: 15px;
+    text-decoration: none; } }
+
+.social-aside__link-holder li:first-of-type a {
   background-color: #c62326; }
 
-.secondary-nav__social-media li:nth-of-type(2) a {
+.social-aside__link-holder li:nth-of-type(2) a {
   background-color: #3b5999; }
 
-.secondary-nav__social-media li:nth-of-type(3) a {
+.social-aside__link-holder li:nth-of-type(3) a {
   background-color: #6a453b; }
 
-.secondary-nav__social-media li:nth-of-type(4) a {
+.social-aside__link-holder li:nth-of-type(4) a {
   background-color: #ffce07; }
 
-.secondary-nav__social-media li:nth-of-type(5) a {
+.social-aside__link-holder li:nth-of-type(5) a {
   background-color: #6bcfed; }
 
-.secondary-nav__social-media li:nth-of-type(6) a {
+.social-aside__link-holder li:nth-of-type(6) a {
   background-color: #f132a6; }
 
-.secondary-nav__social-media li:nth-of-type(7) a {
+.social-aside__link-holder li:nth-of-type(7) a {
   background-color: #de4c40; }
 
-.secondary-nav__social-media a i {
+.social-aside__link-holder a i {
   position: absolute;
   top: 0;
   right: 0;
@@ -1085,46 +1120,46 @@ ul.secondary-nav__social-media {
   background-size: 100%;
   background-repeat: no-repeat; }
 
-.secondary-nav__social-media li:first-of-type a i {
+.social-aside__link-holder li:first-of-type a i {
   background-image: url(img/youtube.svg); }
 
-.secondary-nav__social-media li:nth-of-type(2) a i {
+.social-aside__link-holder li:nth-of-type(2) a i {
   background-image: url(img/facebook.svg); }
 
-.secondary-nav__social-media li:nth-of-type(3) a i {
+.social-aside__link-holder li:nth-of-type(3) a i {
   background-image: url(img/instagram.svg); }
 
-.secondary-nav__social-media li:nth-of-type(4) a i {
+.social-aside__link-holder li:nth-of-type(4) a i {
   background-image: url(img/snapchat.svg); }
 
-.secondary-nav__social-media li:nth-of-type(5) a i {
+.social-aside__link-holder li:nth-of-type(5) a i {
   background-image: url(img/twitter.svg); }
 
-.secondary-nav__social-media li:nth-of-type(6) a i {
+.social-aside__link-holder li:nth-of-type(6) a i {
   background-color: #f132a6; }
 
-.secondary-nav__social-media li:nth-of-type(7) a i {
+.social-aside__link-holder li:nth-of-type(7) a i {
   background-image: url(img/google+.svg); }
 
-.secondary-nav__social-media li:first-of-type a i {
+.social-aside__link-holder li:first-of-type a i {
   background-color: #c62326; }
 
-.secondary-nav__social-media li:nth-of-type(2) a i {
+.social-aside__link-holder li:nth-of-type(2) a i {
   background-color: #3b5999; }
 
-.secondary-nav__social-media li:nth-of-type(3) a i {
+.social-aside__link-holder li:nth-of-type(3) a i {
   background-color: #6a453b; }
 
-.secondary-nav__social-media li:nth-of-type(4) a i {
+.social-aside__link-holder li:nth-of-type(4) a i {
   background-color: #ffce07; }
 
-.secondary-nav__social-media li:nth-of-type(5) a i {
+.social-aside__link-holder li:nth-of-type(5) a i {
   background-color: #6bcfed; }
 
-.secondary-nav__social-media li:nth-of-type(6) a i {
+.social-aside__link-holder li:nth-of-type(6) a i {
   background-color: #f132a6; }
 
-.secondary-nav__social-media li:nth-of-type(7) a i {
+.social-aside__link-holder li:nth-of-type(7) a i {
   background-color: #de4c40; }
 
 /* ------------------------------------
@@ -1237,8 +1272,8 @@ ul.secondary-nav__social-media {
  *  RIGHT SIDEBAR
  * --------------------------------- */
 .right-sidebar {
-  width: 420px;
-  padding: 0 30px; }
+  width: 410px;
+  padding: 0 20px 0 30px; }
 
 .right-sidebar section {
   height: 500px;

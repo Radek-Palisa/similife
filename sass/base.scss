@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'HyperPunchPink';
+  src: url('./fonts/HyperPunchPink.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Porceleina';
+  src: url('./fonts/porceleina.otf');
+}
+
+
 html {
   box-sizing: border-box;
 }
@@ -16,7 +27,7 @@ body {
 .site-main {
 	z-index: 3;
 	position: relative;
-	min-width: 1335px;
+	min-width: 1220px;
 	padding: 0 0 100px;
 	display: flex;
 	justify-content: center;
@@ -29,6 +40,10 @@ body {
 }
 
 .container {
-	width: 1215px;
+	max-width: 1220px;
 	margin: 0 auto;
+}
+
+.posts {
+	margin-left: 160px;
 }
