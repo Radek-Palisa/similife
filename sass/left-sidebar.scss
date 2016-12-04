@@ -4,13 +4,16 @@
 
 .left-sidebar {
 	position: absolute;
-	top: 75px;
+	top: 69px; // 75px
 	left: 0;
 	right: 0;
 	color: #777;
 	line-height: 2;
 	z-index: -1;
 
+	> .container {
+		max-width: 1200px;
+	}
 	section p {
 		margin-top: 0;
 		margin-bottom: 0;
@@ -25,7 +28,7 @@
 }
 
 .secondary-nav ul {
-	margin: 1em 0 50px 0;
+	margin: 7px 0 50px 0;
 	list-style: none;
 	padding-left: 20px;
 	text-align: right;
@@ -61,7 +64,8 @@
 				font-size: 18px;
 				background-color: orangered;
 				background-color: #fff;
-				transition: all 0.3s ease-in-out;
+				transition: all 0.1s ease-in-out;
+				border-right: 2px solid lightgrey;
 			}
 		}
 	}
@@ -83,8 +87,9 @@
 }
 
 .secondary-nav__rubriky li a:hover span {
-	transform: translateX(-29px);
-	transition: all 0.3s ease-in-out;
+	//transform: translateX(-29px);
+	transition: all 0.1s ease-in-out;
+	border-right: 2px solid black;
 }
 
 /* STITKY */

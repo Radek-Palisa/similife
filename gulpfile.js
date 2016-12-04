@@ -1,6 +1,20 @@
 var gulp = require('gulp');
 var sass = require("gulp-sass");
+var plumber = require('gulp-plumber');
+var notify = require('gulp-notify');
+var beep = require('beepbeep');
 var browserSync = require('browser-sync').create();
+
+// https://github.com/floatdrop/gulp-plumber/issues/38#issuecomment-140677501
+var onError = function(err) {   
+    notify.onError({
+      title:    "Gulp error in " + err.plugin,
+      message:  err.toString()
+    })(err); 
+    console.log(err.toString());
+    //beep(3);
+    this.emit('end');
+};
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
@@ -17,9 +31,8 @@ gulp.task('serve', ['sass'], function() {
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
   return gulp.src('./sass/style.scss')
-  	.pipe(sass().on('error', function (err) {
-            console.error('Error!', err.message);
-    }))
+  	.pipe(plumber({ errorHandler: onError }))
+    .pipe(sass())
     .pipe(gulp.dest('./css/'))
     .pipe(browserSync.stream());
 });

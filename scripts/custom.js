@@ -29,6 +29,7 @@ window.addEventListener('scroll', function(e) {
 		}
 		ticking = true;
 	}
+	/*
 	if (last_known_scroll_position >= leftSidebarOffset && last_known_scroll_position < 2500) {
 		if (!ticking) {
 			window.requestAnimationFrame(function() {
@@ -45,6 +46,7 @@ window.addEventListener('scroll', function(e) {
 		$leftSidebar.removeClass('left-sidebar--fixed-js');
 		$leftSidebar.css('top', 75);
 	}
+	*/
 });
 
 

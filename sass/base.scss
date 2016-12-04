@@ -8,6 +8,10 @@
   src: url('./fonts/porceleina.otf');
 }
 
+@font-face {
+  font-family: 'Sorreda Pro';
+  src: url('./fonts/Sorreda_Pro.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
 
 html {
   box-sizing: border-box;

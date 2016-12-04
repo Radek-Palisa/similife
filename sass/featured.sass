@@ -1,9 +1,12 @@
 .featured
-	z-index: 3
+	z-index: 4
 	position: relative
 	padding: 20px 0 47px
+	//border-bottom: 1px solid #eae8e8
 	background: #fff url('./img/heart.svg') center bottom 15px / 16px auto no-repeat
 	background: #fff url('./img/arrow-down.svg') center bottom 15px / 16px auto no-repeat
+	box-shadow: 0 4px 29px #dedede
+	box-shadow: 0 4px 29px rgb(228, 228, 228)
 
 	h3
 		font-size: 13px
@@ -14,12 +17,14 @@
 		color: grey
 
 	.container
+		margin: 0 13vw
+		max-width: none
 		position: relative
 		display: flex
 		list-style: none
-		padding-bottom: 33px
+		padding-bottom: 3px
 
-		&::after 
+		//&::after 
 			content: ''
 			position: absolute
 			bottom: 0
@@ -28,13 +33,17 @@
 			width: 40vw
 			height: 1px 
 			background-image: linear-gradient(90deg, transparent, #e2e2e2 10%, #e2e2e2 90%, transparent)
-			background-image: linear-gradient(90deg, transparent, rgba(226, 226, 226, 0.8) 10%, rgba(226, 226, 226, 0.8) 90%, transparent);
+			background-image: linear-gradient(90deg, transparent, rgba(226, 226, 226, 0.8) 10%, rgba(226, 226, 226, 0.8) 90%, transparent)
 
 		article
-			width: 25%
+			width: 20%
+			opacity: .8
+
+			&:hover 
+				opacity: 1
 
 		article + article 
-			margin-left: 30px
+			margin-left: 15px
 
 	&-thumb
 		height: 173px
@@ -56,31 +65,97 @@
 		margin-bottom: 0
 		text-align: center
 
+.site-main__title
+	display: none
+	padding: 0px 0 0
+
+	p 
+		width: 150px
+		background-color: white 
+		margin: 30px 0
+		line-height: 2
+		font-weight: bold
+		color: grey
+		text-transform: uppercase
+		font-size: 14px
+		letter-spacing: 1px
+		font-style: italic
+		//width: 220px
+		text-align: center
+		/* background-image: linear-gradient(90deg, #f0f1f1, white 5%, white 95%, #f0f1f1) */
+		font-family: 'Dancing Script'
+
 .search-form
 	width: 100%
-	padding: 30px 0 10px
-	text-align: right
+	padding: 0 0 0px
+	margin-top: 40px
 
-	input 
-		margin-right: 54px
-		padding: 8px 20px
-		width: 0
-		background: white url('img/search.svg') right 10px center / 20px auto no-repeat
-		border: 1px solid transparent 
-		outline: none
-		border-radius: 5px
-		cursor: pointer
-		transition: width 0.2s ease-in-out
+	> .container 
+		display: flex 
+		justify-content: space-between
+		align-items: center
 
-		&::-webkit-input-placeholder
-			opacity: 0
-			transition: opacity 0.1s ease-in-out
+	.breadcrumbs
+		margin-left: 10px
+		width: 160px
+		font-family: 'Dancing Script'
+		//background-color: #fff
 
-		&:focus
-			border: 1px solid #d6d6d6
+		span 
+			display: inline-block
+			padding: 5px 10px
+			font-size: 2em
+			line-height: 1.3
+
+	.middle
+		width: 580px
+		margin-bottom: 10px
+		padding: 1px 0
+		color: grey
+		font-size: 16px
+		//letter-spacing: 1px
+		font-style: italic
+		border-bottom: 1px solid #d8d8d8
+		text-align: center
+
+	.search-holder
+		position: relative
+
+		input 
+			margin-right: 54px
+			margin-bottom: 10px
+			padding: 1px 5px
+			font-style: italic
+			width: 0
 			width: 362px
-			cursor: default
+			background: transparent url('img/search.svg') right 5px center / 16px auto no-repeat
+			border: 1px solid transparent
+			border-bottom: 1px solid #d6d6d6
+			outline: none
+			cursor: pointer
+			transition: width 0.2s ease-in-out
+			font-size: 16px
+			color: #8b8e99
+			transition: all 0.1s ease-in-out
 
-			&::-webkit-input-placeholder
-				opacity: 1
-				transition: opacity 0.1s ease-in-out 0.1s
+			&:focus
+				cursor: default
+				border-bottom: 1px solid darkgrey
+				transition: all 0.1s ease-in-out
+
+				+ label 
+					transform: translateY(-105%)
+					transition: all 0.1s ease-in-out
+					cursor: default
+					font-size: 14px
+					color: #ababab
+
+		label 
+			position: absolute
+			top: 2px
+			left: 5px
+			color: grey
+			font-style: italic
+			font-size: 16px
+			cursor: pointer
+			transition: all 0.1s ease-in-out
