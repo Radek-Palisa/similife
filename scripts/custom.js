@@ -4,13 +4,13 @@
 var last_known_scroll_position = 0;
 var ticking = false;
 
-var $siteHeader = $('#site-header'),
-	$siteHeaderHeight = $siteHeader.outerHeight();
+var $banner = $('#banner'),
+	$bannerHeight = $banner.outerHeight();
 
 function parallax(scroll_pos) {
   var wScrol = $(document).scrollTop();
   //$siteHeader.css('transform', 'translateY('+scroll_pos+')');
-  $siteHeader.css('top', scroll_pos*-0.5);
+  $banner.css('top', 110 + (scroll_pos*-1));
 }
 
 var $leftSidebar = $('#left-sidebar'),
@@ -20,7 +20,7 @@ var $leftSidebar = $('#left-sidebar'),
 
 window.addEventListener('scroll', function(e) {
   last_known_scroll_position = window.scrollY;
-	if (last_known_scroll_position >= 0 && last_known_scroll_position < $siteHeaderHeight) {
+	if (last_known_scroll_position >= 0 && last_known_scroll_position < ($bannerHeight + 110)) {
 		if (!ticking) {
 			window.requestAnimationFrame(function() {
 				parallax(last_known_scroll_position);
