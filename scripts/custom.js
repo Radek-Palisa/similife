@@ -9,8 +9,8 @@ var $banner = $('#banner'),
 
 function parallax(scroll_pos) {
   var wScrol = $(document).scrollTop();
-  //$siteHeader.css('transform', 'translateY('+scroll_pos+')');
-  $banner.css('top', 110 + (scroll_pos*-1));
+  //$banner.css('transform', 'translateY('+scroll_pos+')');
+  $banner.css('top', 0 + (scroll_pos*-0.7));
 }
 
 var $leftSidebar = $('#left-sidebar'),
@@ -51,19 +51,19 @@ window.addEventListener('scroll', function(e) {
 
 
 function changeToImgA() {
-	$siteHeader.css('background-image', 'url(./css/img/banner.jpg)');
+	$banner.css('background-image', 'url(./css/img/banner.jpg)');
 }
 
 function changeToImgB() {
-	$siteHeader.css('background-image', 'url(./css/img/banner-light.jpg)');
+	$banner.css('background-image', 'url(./css/img/banner-light.jpg)');
 }
 
 function changeToImgC() {
-	$siteHeader.css('background-image', 'url(./css/img/banner-fall.jpg)');
+	$banner.css('background-image', 'url(./css/img/banner-fall.jpg)');
 }
 
 function changeToImgD() {
-	$siteHeader.css('background-image', 'url(./css/img/banner-fuji.jpg)');
+	$banner.css('background-image', 'url(./css/img/banner-fuji.jpg)');
 }
 
 
