@@ -10,7 +10,12 @@ var $banner = $('#banner'),
 function parallax(scroll_pos) {
   var wScrol = $(document).scrollTop();
   //$banner.css('transform', 'translateY('+scroll_pos+')');
-  $banner.css('top', 0 + (scroll_pos*-0.7));
+  var parallaxScroll = -(scroll_pos * 0.7);
+
+  var clippedScroll = Math.round(parallaxScroll * 100) / 100;
+  $banner.css('top', clippedScroll);
+
+  console.log(clippedScroll);
 }
 
 var $leftSidebar = $('#left-sidebar'),
@@ -20,7 +25,7 @@ var $leftSidebar = $('#left-sidebar'),
 
 window.addEventListener('scroll', function(e) {
   last_known_scroll_position = window.scrollY;
-	if (last_known_scroll_position >= 0 && last_known_scroll_position < ($bannerHeight + 110)) {
+	if (last_known_scroll_position >= 0 && last_known_scroll_position < $bannerHeight) {
 		if (!ticking) {
 			window.requestAnimationFrame(function() {
 				parallax(last_known_scroll_position);

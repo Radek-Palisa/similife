@@ -1,7 +1,7 @@
 .featured
 	z-index: 4
 	position: relative
-	padding: 20px 0 47px
+	padding: 20px 0 108px
 	background-color: white
 	//border-bottom: 1px solid #eae8e8
 	//background: #fff url('./img/heart.svg') center bottom 15px / 16px auto no-repeat
@@ -10,8 +10,14 @@
 	box-shadow: 0 4px 29px rgb(228, 228, 228)
 
 	h3
+		width: 100%
+		margin: 30px 0
 		text-align: center
 		color: grey
+
+	> div 
+		display: flex 
+
 
 	&__blog-title, &__youtube-title
 		width: calc(60% + 16px)
@@ -49,14 +55,49 @@
 			background-image: linear-gradient(90deg, transparent, rgba(226, 226, 226, 0.8) 10%, rgba(226, 226, 226, 0.8) 90%, transparent)
 
 		article
-			width: calc(20% - 8px)
-			opacity: .8
+			width: calc(33.33% - 8px)
+			position: relative
 
-			&:hover 
-				opacity: 1
 
 		article + article 
 			margin-left: 8px
+
+
+	&__blog, &__youtube
+		
+		> article:first-of-type
+			width: 100%
+			margin-bottom: 8px
+
+		> article:nth-of-type(2)
+			width: calc(50% - 4px)
+			margin: 0
+			margin-right: 4px
+
+		> article:nth-of-type(3)
+			width: calc(50% - 4px)
+			margin: 0
+			margin-left: 4px
+
+	&__youtube
+		padding-left: 4px
+
+		h4 
+			display: none
+
+	&__blog
+		padding-right: 4px
+
+		h4
+			position: absolute
+			bottom: 15px
+			left: 15px
+			margin: 0
+			text-align: left
+			line-height: 1.3
+			font-size: 18px
+			font-weight: 600
+			color: white
 
 	&-thumb
 		position: relative
@@ -65,21 +106,20 @@
 		background-size: cover
 
 		&-2 
-			background-image: url('img/thumb2.jpg')	
+			background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(img/thumb2.jpg)
 
 		&-3 
-			background-image: url('img/thumb3.jpg')
+			background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('img/thumb3.jpg')
 
 		&-4 
-			background-image: url('img/thumb4.jpg')	
+			background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('img/thumb4.jpg')	
 
 		&-5 
 			background-image: url('img/thumb5.jpg')	
 
 	h4
-		margin-bottom: 0
-		text-align: center
-		font-size: 15px
+		position: absolute
+
 
 	&-thumb > iframe
 		position: absolute
@@ -100,8 +140,7 @@
 
 	p 
 		width: 150px
-		margin: 30px 0
-		line-height: 2
+		margin: 50px 0 30px
 		font-weight: bold
 		color: grey
 		font-size: 1.17em
