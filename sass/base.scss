@@ -1,3 +1,8 @@
+// --bg-color: #e9f3f4;
+// --bg-color: #edf1f1;
+// --bg-color: #f0f1f1;
+$grey-bg: #eff5f5;
+
 @font-face {
   font-family: 'HyperPunchPink';
   src: url('./fonts/HyperPunchPink.ttf')  format('truetype'); /* Safari, Android, iOS */
@@ -36,11 +41,7 @@ body {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-
-	--bg-color: #e9f3f4;
-	--bg-color: #edf1f1;
-	--bg-color: #f0f1f1;
-	background-color: var(--bg-color);
+	background-color: $grey-bg;
 }
 
 .container {
