@@ -10,41 +10,17 @@
 </head>
 <body>
 <header class="site-header" id="site-header">
+	<section class="site-branding">SimiLife<br><span>Lifestyle blog</span></section>
 	<nav class="site-navigation">
 		<span>Blog</span>
 		<span>YouTube</span>
-		<section class="site-branding">SimiLife<br><span>Lifestyle blog</span></section>
 		<span>O mně</span>
+		<span>Partneři</span>
 		<span>Kontakt</span>
 	</nav>
 
 </header>
-<section class="banner" id="banner">
-	<div class="banner--position">
-		<div class="container">
-			<div class="banner-content">
-				<p class="banner-text">Nejaky slogan</p>
-			</div>
-		</div>
-	</div>
-	<div class="change-images">
-		<span>Změn fotku</span>
-		<span onclick="changeToImgA()">1</span>
-		<span onclick="changeToImgB()">2</span>
-		<span onclick="changeToImgC()">3</span>
-		<span onclick="changeToImgD()">4</span>
-	</div>
-</section>
-<section class="social-following">
-	<div class="container">
-		<span class="promo-social promo-social-fb">3,090 se to líbí</span>
-		<span class="promo-social promo-social-youtube">15,614 mě odebírá</span>
-		<span class="promo-social promo-social-insta">3,572 mě sleduje</span>
-		<span class="promo-social promo-social-snapchat">500 mě sleduje</span>
-	</div>
-</section>
 <section class="featured">
-	<h3>Co je nového</h3>
 	<div>
 		<div class="featured__blog">
 			<!--
@@ -56,12 +32,12 @@
 					<div class="featured-thumb featured-thumb-3"></div>
 					<h4>Proč jsem přestala zpeněžovat YouTube videa</h4>
 				</article>
-			</div>
-			<div class="col-2 col-2-a">
-				<article>
-					<div class="featured-thumb featured-thumb-2"></div>
-					<h4>Video z dobrovolnických prací</h4>
-				</article>
+				<div>
+					<article class="featured-article-rotated">
+						<div class="featured-thumb featured-thumb-2"></div>
+						<h4>Video z dobrovolnických prací</h4>
+					</article>
+				</div>
 			</div>
 			<div class="col-2 col-2-b">
 				<article>
@@ -102,6 +78,16 @@
 		</div>
 	</div>
 </section>
+
+<section class="social-following">
+	<div class="container">
+		<span class="promo-social promo-social-fb">3,090 se to líbí</span>
+		<span class="promo-social promo-social-youtube">15,614 mě odebírá</span>
+		<span class="promo-social promo-social-insta">3,572 mě sleduje</span>
+		<span class="promo-social promo-social-snapchat">500 mě sleduje</span>
+	</div>
+</section>
+
 <main class="site-main">
 	<section class="search-form">
 		<div class="container">
@@ -273,5 +259,9 @@
 	<script src="./scripts/jquery-3.1.1.min.js"></script>
 	<script src="./scripts/custom.js"></script>
 </main>
+
+<section class="partners">
+	<p>Partneři</p>
+</section>
 </body>
 </html>

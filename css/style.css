@@ -730,7 +730,8 @@ body {
   z-index: 3;
   position: relative;
   min-width: 1220px;
-  padding: 70px 0 100px;
+  margin: 0 44px 44px;
+  padding: 44px 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -743,6 +744,14 @@ body {
 .posts {
   margin-left: 160px; }
 
+.partners {
+  height: 300px;
+  margin: 0 44px 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eff5f5; }
+
 .site-header {
   position: relative;
   z-index: 5;
@@ -750,25 +759,39 @@ body {
   background-color: white; }
 
 .site-navigation {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center; }
+  text-align: center;
+  margin: 0 8px; }
+  .site-navigation::before, .site-navigation::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: calc(100% - 72px);
+    background-image: linear-gradient(90deg, #d4dcdc, #c5d2d2, #d4dcdc); }
+  .site-navigation::before {
+    top: 0; }
+  .site-navigation::after {
+    bottom: 0; }
   .site-navigation span {
     display: inline-block;
     padding: 7px 17px;
-    letter-spacing: 1px;
-    color: #333;
-    font-size: 15px;
+    letter-spacing: 1.3px;
+    color: #666;
+    font-size: 13px;
     border-radius: 3px;
     cursor: pointer;
-    font-weight: 600; }
+    font-weight: 500;
+    text-transform: uppercase; }
   .site-navigation span + span {
     margin-left: 20px; }
 
 .site-branding {
   width: 200px;
   height: 120px;
+  margin: 0 auto;
   background: url("./img/logo.jpg") center/320% auto no-repeat;
   font-size: 50px;
   line-height: 1;
@@ -824,9 +847,7 @@ body {
 
 .social-following {
   z-index: 6;
-  position: relative;
-  margin-top: 30vw;
-  background-color: #eff5f5; }
+  position: relative; }
   .social-following > .container {
     text-align: center;
     position: relative;
@@ -838,10 +859,10 @@ body {
   font-size: 11px;
   font-family: Verdana;
   background-repeat: no-repeat;
-  color: #8c8c8c !important;
+  color: #4a4a4a !important;
   font-weight: 500; }
   .promo-social + .promo-social {
-    margin-left: 5.5vw; }
+    margin-left: 2.5vw; }
   .promo-social-fb {
     background-image: url("./img/facebook2.svg");
     background-size: 24px auto;
@@ -866,7 +887,6 @@ body {
 .featured {
   z-index: 4;
   position: relative;
-  padding: 20px 0 70px;
   background-color: white; }
   .featured h3 {
     width: 100%;
@@ -876,7 +896,7 @@ body {
     font-size: 15px; }
   .featured > div {
     display: flex;
-    padding: 0 8px; }
+    margin: 0 44px; }
   .featured__blog-title, .featured__youtube-title {
     width: calc(60% + 16px);
     margin: 0 0 10px;
@@ -916,13 +936,37 @@ body {
       padding-bottom: 0;
       height: 100%; }
     .featured__blog > .col-2-a {
-      width: 46%;
-      margin-right: 8px; }
+      position: relative;
+      display: flex;
+      width: 60%;
+      margin-right: 8px;
+      overflow: hidden; }
+      .featured__blog > .col-2-a > article {
+        width: 100%; }
+      .featured__blog > .col-2-a > div {
+        position: absolute;
+        right: -174px;
+        width: 63%;
+        height: 124%;
+        transform: rotateZ(-45deg);
+        border: 8px solid white;
+        background-color: white;
+        overflow: hidden;
+        bottom: -53px; }
+      .featured__blog > .col-2-a .featured-article-rotated {
+        transform: rotateZ(45deg);
+        margin-left: -80px;
+        margin-top: -70px;
+        height: 100%; }
+        .featured__blog > .col-2-a .featured-article-rotated h4 {
+          bottom: 25px;
+          left: 235px;
+          max-width: 210px; }
       .featured__blog > .col-2-a .featured-thumb {
         padding-bottom: 0;
         height: 100%; }
     .featured__blog > .col-2-b {
-      width: 29%;
+      width: 23%;
       margin-right: 8px; }
       .featured__blog > .col-2-b > article:first-of-type {
         height: 50%;
@@ -933,7 +977,7 @@ body {
         margin: 0;
         padding-top: 4px; }
     .featured__blog .col-2-c {
-      width: 25%; }
+      width: 16%; }
       .featured__blog .col-2-c .featured-thumb {
         background-position: center; }
     .featured__blog h4 {
@@ -1046,7 +1090,7 @@ body {
  * --------------------------------- */
 .left-sidebar {
   position: absolute;
-  top: 112px;
+  top: 70px;
   left: 0;
   right: 0;
   color: #777;

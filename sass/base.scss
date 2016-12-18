@@ -37,7 +37,8 @@ body {
 	z-index: 3;
 	position: relative;
 	min-width: 1220px;
-	padding: 70px 0 100px;
+	margin: 0 44px 44px;
+	padding: 44px 0;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -51,4 +52,13 @@ body {
 
 .posts {
 	margin-left: 160px;
+}
+
+.partners {
+	height: 300px;
+	margin: 0 44px 44px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $grey-bg;
 }
