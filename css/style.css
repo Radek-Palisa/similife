@@ -850,12 +850,11 @@ body {
   position: relative; }
   .social-following > .container {
     text-align: center;
-    position: relative;
-    padding: 4px 0; }
+    position: relative; }
 
 .promo-social {
   display: inline-block;
-  padding: 10px 10px 10px 25px;
+  padding: 9px 10px 9px 25px;
   font-size: 11px;
   font-family: Verdana;
   background-repeat: no-repeat;
