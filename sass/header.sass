@@ -1,0 +1,104 @@
+.site-header
+	position: relative
+	z-index: 5
+	padding: 10px 0
+	background-color: white 
+
+.site-navigation
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	text-align: center
+	margin: 0 8px
+	//border-top: 1px solid #e5efef
+	//border-bottom: 1px solid #e5efef
+
+	&::before, &::after 
+		content: ''
+		position: absolute 	
+		height: 1px
+		width: calc(100% - 72px)
+		background-image: linear-gradient(90deg, #d4dcdc, #c5d2d2, #d4dcdc)
+		
+	&::before
+		top: 0
+	&::after 
+		bottom: 0
+
+	span 
+		display: inline-block
+		padding: 7px 17px
+		letter-spacing: 1.3px
+		color: #666
+		font-size: 13px
+		border-radius: 3px
+		cursor: pointer
+		font-weight: 500
+		text-transform: uppercase
+
+	span + span 
+		margin-left: 20px
+
+.site-branding
+	width: 200px
+	height: 120px
+	margin: 0 auto
+	background: url('./img/logo.jpg') center / 320% auto no-repeat
+	font-size: 50px
+	line-height: 1
+	font-family: 'Sorreda Pro'
+	padding-top: 17px
+	color: white
+	letter-spacing: 1px
+	text-indent: 100%
+	white-space: nowrap
+
+	span 
+		display: block
+		margin-top: 11px
+		font-size: 16px
+		letter-spacing: 4px
+		color: white
+		padding: 0
+
+.banner
+	position: fixed
+	top: 0
+	width: 100%
+	height: calc(30vw + 140px)
+	background-image: url('./img/banner.jpg')
+	background-image: url('./img/banner-light.jpg')
+	background-image: url('./img/banner-fall.jpg')
+	background-image: url('./img/banner-fuji.jpg')
+	background-size: cover
+	//background-position: left 110%
+	background-position: center 38%
+	//background-attachment: fixed
+	transform: rotateZ(0)
+
+.banner-content
+	opacity: 0
+
+.change-images
+	position: absolute
+	font-family: Arial
+	font-size: 12px
+	top: 25%
+	left: -70px
+	color: #000000
+	transform: rotateZ(-270deg)
+
+	> span 
+		display: inline-block
+		padding: 0 5px
+		margin-right: 5px
+		background-color: rgba(255,255,255,0.5)
+		border-radius: 3px
+
+		&:not(:first-of-type)
+			transform: rotateZ(270deg)
+
+		&:hover:not(:first-of-type)
+			background-color: white
+			cursor: pointer

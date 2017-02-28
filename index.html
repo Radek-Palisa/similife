@@ -3,13 +3,107 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Similife</title>
-	<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Lily+Script+One|Dancing+Script:400,700&amp;subset=latin-ext" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
+<header class="site-header" id="site-header">
+	<section class="site-branding">SimiLife<br><span>Lifestyle blog</span></section>
+	<nav class="site-navigation">
+		<span>Blog</span>
+		<span>YouTube</span>
+		<span>O mně</span>
+		<span>Partneři</span>
+		<span>Kontakt</span>
+	</nav>
+
+</header>
+<section class="featured">
+	<div>
+		<div class="featured__blog">
+			<!--
+			<p class="container featured__blog-title">Na blogu</p>
+			<p class="container featured__youtube-title">Na Youtube</p>
+			-->
+			<div class="col-2 col-2-a">
+				<article>
+					<div class="featured-thumb featured-thumb-3"></div>
+					<h4>Proč jsem přestala zpeněžovat YouTube videa</h4>
+				</article>
+				<div>
+					<article class="featured-article-rotated">
+						<div class="featured-thumb featured-thumb-2"></div>
+						<h4>Video z dobrovolnických prací</h4>
+					</article>
+				</div>
+			</div>
+			<div class="col-2 col-2-b">
+				<article>
+					<div class="featured-thumb featured-thumb-3"></div>
+					<h4>Proč jsem přestala zpeněžovat YouTube videa</h4>
+				</article>
+				<article>
+					<div class="featured-thumb featured-thumb-5"></div>
+					<h4>Jak často a čím si čistím zuby?</h4>
+				</article>
+			</div>
+			<div class="col-2 col-2-c">
+				<article>
+					<div class="featured-thumb featured-thumb-4"></div>
+					<h4>Když se to se*re tak se to...aneb šikovná Simi rozflákala iphone</h4>
+				</article>
+			</div>
+			<!--
+			<article>
+				<div class="featured-thumb featured-thumb-3"></div>
+				<h4>Proč jsem přestala zpeněžovat YouTube videa</h4>
+			</article>
+			-->
+		</div>
+		<div class="featured__youtube">
+			<article>
+				<div class="featured-thumb">
+					<iframe src="https://www.youtube.com/embed/6Zk4pbyi_6o" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<h4>Nejčastější otázky o hubnutí</h4>
+			</article>
+			<article>
+				<div class="featured-thumb">
+					<iframe src="https://www.youtube.com/embed/sIQmPaFT3KA" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<h4>Cvičení na břicho, stehna, zadek a ruce!</h4>
+			</article>
+		</div>
+	</div>
+</section>
+
+<section class="social-following">
+	<div class="container">
+		<span class="promo-social promo-social-fb">3,090 se to líbí</span>
+		<span class="promo-social promo-social-youtube">15,614 mě odebírá</span>
+		<span class="promo-social promo-social-insta">3,572 mě sleduje</span>
+		<span class="promo-social promo-social-snapchat">500 mě sleduje</span>
+	</div>
+</section>
+
 <main class="site-main">
-	<aside class="left-sidebar">
-		<section class="secondary-nav">
+	<section class="search-form">
+		<div class="container">
+			<div class="breadcrumbs">
+				<span></span>
+			</div>
+			<div class="middle">Nejnovější příspěvky</div>
+			<div class="search-holder">
+				<input id="search-form" type="text" name="search">
+				<label for="search-form">Co vás zajímá?</label>
+			</div>
+		</div>
+	</section>
+	<aside class="left-sidebar" id="left-sidebar">
+		<div class="container">
+		<section class="secondary-nav" id="secondary-nav">
 			<p>Rubriky</p>
 			<ul class="secondary-nav__rubriky">
 				<li><a href="#0"><span>Podzim</span><button></button></a></li>
@@ -21,6 +115,7 @@
 				<li><a href="#0"><span>Jídelničky</span><button></button></a></li>
 				<li><a href="#"><span>Kontakt</span><button></button></a></li>
 			</ul>
+			<!--
 			<p>Štítky</p>
 			<ul class="secondary-nav__tags">
 				<li><a href="#0">Běh</a></li>
@@ -40,20 +135,13 @@
 				<li><a href="#0">Raw</a></li>
 				<li><a href="#0">Recepty</a></li>
 			</ul>
-			<p>Odkazy</p>
-			<ul class="secondary-nav__social-media">
-				<li><a href="#0"><span>YouTube</span><i></i></a></li>
-				<li><a href="#0"><span>Facebook</span><i></i></a></li>
-				<li><a href="#0"><span>Instagram</span><i></i></a></li>
-				<li><a href="#0"><span>Snapchat</span><i></i></a></li>
-				<li><a href="#0"><span>Twitter</span><i></i></a></li>
-				<li><a href="#0"><span>AskFM</span><i></i></a></li>
-				<li><a href="#0"><span>Google+</span><i></i></a></li>
-			</ul>
+			<p>Odkazy</p>  -->
+ 
 		</section>
+		</div>
 	</aside>
 
-	<section>
+	<section class="posts">
 	
 		<section class="post">
 			<div class="thumb thumb-1"></div>
@@ -150,11 +238,30 @@
 			<p>Ing. Simona Brabcová, instruktorka Body&Mind a rekvalifikovaná výživová poradkyně. Neoficiálně Simi, která miluje zdravý životní styl, cvičení a inspirující lidi okolo sebe ♥</p>
 			<a href="#0">více o mně</a>
 		</section>
-		<section class="tags"></section>
+		<section class="tags">
+			<h3>Archív</h3>
+		</section>
 		<section class="adverts"></section>
 	</aside>
 
+	<aside class="social-aside">
+		<ul class="social-aside__link-holder">
+			<li><a href="#0"><span>YouTube</span><i></i></a></li>
+			<li><a href="#0"><span>Facebook</span><i></i></a></li>
+			<li><a href="#0"><span>Instagram</span><i></i></a></li>
+			<li><a href="#0"><span>Snapchat</span><i></i></a></li>
+			<li><a href="#0"><span>Twitter</span><i></i></a></li>
+			<li><a href="#0"><span>AskFM</span><i></i></a></li>
+			<li><a href="#0"><span>Google+</span><i></i></a></li>
+		</ul>
+	</aside>
+
+	<script src="./scripts/jquery-3.1.1.min.js"></script>
 	<script src="./scripts/custom.js"></script>
 </main>
+
+<section class="partners">
+	<p>Partneři</p>
+</section>
 </body>
 </html>

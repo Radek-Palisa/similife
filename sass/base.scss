@@ -1,3 +1,23 @@
+// --bg-color: #e9f3f4;
+// --bg-color: #edf1f1;
+// --bg-color: #f0f1f1;
+$grey-bg: #eff5f5;
+
+@font-face {
+  font-family: 'HyperPunchPink';
+  src: url('./fonts/HyperPunchPink.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Porceleina';
+  src: url('./fonts/porceleina.otf');
+}
+
+@font-face {
+  font-family: 'Sorreda Pro';
+  src: url('./fonts/Sorreda_Pro.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
 html {
   box-sizing: border-box;
 }
@@ -13,15 +33,32 @@ body {
 	font-family: Raleway;
 }
 
-body {
-	--bg-color: #e9f3f4;
-	--bg-color: #f0f1f1;
-	background-color: var(--bg-color);
-}
-
 .site-main {
-	min-width: 1335px;
-	padding: 70px 0 100px;
+	z-index: 3;
+	position: relative;
+	min-width: 1220px;
+	margin: 0 44px 44px;
+	padding: 44px 0;
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
+	background-color: $grey-bg;
+}
+
+.container {
+	max-width: 1220px;
+	margin: 0 auto;
+}
+
+.posts {
+	margin-left: 160px;
+}
+
+.partners {
+	height: 300px;
+	margin: 0 44px 44px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $grey-bg;
 }

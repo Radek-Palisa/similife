@@ -17,6 +17,7 @@ wp-content/plugins/hello.php
 /sitemap.xml.gz
 
 css/img
+css/fonts
 node_modules
 .sass-cache
 underscores
