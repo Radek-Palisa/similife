@@ -9,259 +9,357 @@
 
 </head>
 <body>
-<header class="site-header" id="site-header">
-	<section class="site-branding">SimiLife<br><span>Lifestyle blog</span></section>
-	<nav class="site-navigation">
-		<span>Blog</span>
-		<span>YouTube</span>
-		<span>O mně</span>
-		<span>Partneři</span>
-		<span>Kontakt</span>
-	</nav>
 
-</header>
-<section class="featured">
-	<div>
-		<div class="featured__blog">
-			<!--
-			<p class="container featured__blog-title">Na blogu</p>
-			<p class="container featured__youtube-title">Na Youtube</p>
-			-->
-			<div class="col-2 col-2-a">
-				<article>
-					<div class="featured-thumb featured-thumb-3"></div>
-					<h4>Proč jsem přestala zpeněžovat YouTube videa</h4>
-				</article>
-				<div>
-					<article class="featured-article-rotated">
-						<div class="featured-thumb featured-thumb-2"></div>
-						<h4>Video z dobrovolnických prací</h4>
-					</article>
-				</div>
-			</div>
-			<div class="col-2 col-2-b">
-				<article>
-					<div class="featured-thumb featured-thumb-3"></div>
-					<h4>Proč jsem přestala zpeněžovat YouTube videa</h4>
-				</article>
-				<article>
-					<div class="featured-thumb featured-thumb-5"></div>
-					<h4>Jak často a čím si čistím zuby?</h4>
-				</article>
-			</div>
-			<div class="col-2 col-2-c">
-				<article>
-					<div class="featured-thumb featured-thumb-4"></div>
-					<h4>Když se to se*re tak se to...aneb šikovná Simi rozflákala iphone</h4>
-				</article>
-			</div>
-			<!--
-			<article>
+<div class="site">
+
+	<header class="site-header" id="site-header">
+		<section class="site-branding"></section>
+		<button class="menu-button" id="menu-button">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<nav class="site-navigation">
+			<span>Blog</span>
+			<span>YouTube</span>
+			<span>O mně</span>
+			<span>Partneři</span>
+			<span>Kontakt</span>
+		</nav>
+	</header>
+
+	<section class="featured">
+		<article class="featured__item featured__item--1st">
+			<div class="featured-thumb featured-thumb-2"></div>
+			<h4>Hebké a krásné vlasy! Skvělý dárek pro vaše mamimnky</h4>
+		</article>
+		<article class="featured__item featured__item--2nd">
+			<div>
 				<div class="featured-thumb featured-thumb-3"></div>
 				<h4>Proč jsem přestala zpeněžovat YouTube videa</h4>
-			</article>
-			-->
-		</div>
-		<div class="featured__youtube">
-			<article>
-				<div class="featured-thumb">
-					<iframe src="https://www.youtube.com/embed/6Zk4pbyi_6o" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<h4>Nejčastější otázky o hubnutí</h4>
-			</article>
-			<article>
-				<div class="featured-thumb">
-					<iframe src="https://www.youtube.com/embed/sIQmPaFT3KA" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<h4>Cvičení na břicho, stehna, zadek a ruce!</h4>
-			</article>
-		</div>
-	</div>
-</section>
+			</div>
+		</article>
+		<article class="featured__item featured__item--3rd">
+			<div>
+				<div class="featured-thumb featured-thumb-5"></div>
+				<h4>Proč jsem přestala zpeněžovat YouTube videa</h4>
+			</div>
+		</article>
+		<article class="featured__item featured__item--4th">
+			<div class="featured-thumb featured-thumb-4"></div>
+			<h4>Když se to se*re tak se to...aneb šikovná Simi rozflákala iphone</h4>
+		</article>
+	</section>
 
-<section class="social-following">
-	<div class="container">
-		<span class="promo-social promo-social-fb">3,090 se to líbí</span>
-		<span class="promo-social promo-social-youtube">15,614 mě odebírá</span>
-		<span class="promo-social promo-social-insta">3,572 mě sleduje</span>
-		<span class="promo-social promo-social-snapchat">500 mě sleduje</span>
-	</div>
-</section>
-
-<main class="site-main">
-	<section class="search-form">
+	<section class="social-following">
 		<div class="container">
-			<div class="breadcrumbs">
-				<span></span>
-			</div>
-			<div class="middle">Nejnovější příspěvky</div>
-			<div class="search-holder">
-				<input id="search-form" type="text" name="search">
-				<label for="search-form">Co vás zajímá?</label>
-			</div>
+			<span class="promo-social promo-social-fb">3,090 se to líbí</span>
+			<span class="promo-social promo-social-youtube">15,614 mě odebírá</span>
+			<span class="promo-social promo-social-insta" onclick="slideout.close()">3,572 mě sleduje</span>
+			<span class="promo-social promo-social-snapchat" onclick="slideout.open()">500 mě sleduje</span>
 		</div>
 	</section>
-	<aside class="left-sidebar" id="left-sidebar">
-		<div class="container">
-		<section class="secondary-nav" id="secondary-nav">
+
+	<main class="site-main site-main--index">
+
+		<aside class="left-sidebar" id="left-sidebar">
 			<p>Rubriky</p>
-			<ul class="secondary-nav__rubriky">
-				<li><a href="#0"><span>Podzim</span><button></button></a></li>
-				<li><a href="#0"><span>Videa</span><button></button></a></li>
-				<li><a href="#0"><span>Jídlo</span><button></button></a></li>
-				<li><a href="#0"><span>Cvičení</span><button></button></a></li>
-				<li><a href="#0"><span>Seberozvoj</span><button></button></a></li>
-				<li><a href="#0"><span>Krása</span><button></button></a></li>
-				<li><a href="#0"><span>Jídelničky</span><button></button></a></li>
-				<li><a href="#"><span>Kontakt</span><button></button></a></li>
-			</ul>
-			<!--
-			<p>Štítky</p>
-			<ul class="secondary-nav__tags">
-				<li><a href="#0">Běh</a></li>
-				<li><a href="#0">Co je nového</a></li>
-				<li><a href="#0">Detox</a></li>
-				<li><a href="#0">Dieta</a></li>
-				<li><a href="#0">Featured</a></li>
-				<li><a href="#0">Fotky</a></li>
-				<li><a href="#0">Hubnutí</a></li>
-				<li><a href="#0">Inspirace</a></li>
-				<li><a href="#0">Jak být štastný</a></li>
-				<li><a href="#0">Jóga</a></li>
-				<li><a href="#0">Knihy</a></li>
-				<li><a href="#0">Motivace</a></li>
-				<li><a href="#0">Můj názor na...</a></li>
-				<li><a href="#0">Posilování</a></li>
-				<li><a href="#0">Raw</a></li>
-				<li><a href="#0">Recepty</a></li>
-			</ul>
-			<p>Odkazy</p>  -->
- 
-		</section>
+			<section class="secondary-nav" id="secondary-nav">
+				<ul class="secondary-nav__rubriky">
+					<li><a href="#0">Podzim</a></li>
+					<li><a href="#0">Videa</a></li>
+					<li><a href="#0">Jídlo</a></li>
+					<li><a href="#0">Cvičení</a></li>
+					<li><a href="#0">Seberozvoj</a></li>
+					<li><a href="#0">Krása</a></li>
+					<li><a href="#0">Jídelničky</a></li>
+					<li><a href="#">Kontakt</a></li>
+				</ul>			
+			</section>
+		</aside>
+		<div class="mobile-post-heading">
+			<strong>Nejnovější příspěvky</strong>
 		</div>
-	</aside>
+		<section class="posts">
 
-	<section class="posts">
-	
-		<section class="post">
-			<div class="thumb thumb-1"></div>
-			<section class="post-card">
-				<h2 class="post-title">Calvin Klein Down Town</h2>
-				<p class="date">19. Srpen 2016</p>
-				<p class="post-text">Před pár týdny jsem byla na jednom pohovoru, který nabízel možnost stát se Reserved girl. Ve zkratce se jednalo o...</p>
-				<footer class="post-footer">
-					<div class="left-side">
-						<span class="tag">Featured | Krása</span>
+			<div class="middle">Nejnovější příspěvky</div>
+
+			<section class="post">
+				<div class="thumb thumb-1">
+					<div class="thumb__hoverlay">
+						<span class="thumb__button">Zobrazit příspěvek</span>
 					</div>
-					<div class="right-side">
-						<a href="#" class="go-to-link">Zobrazit příspěvek</a>
-					</div>	
-				</footer>
+				</div>
+				<section class="post-card">
+					<h2 class="post-title"><a href="#0">Calvin Klein Down Town</a></h2>
+					<p class="date">19. Srpen 2016</p>
+					<p class="post-text">Před pár týdny jsem byla na jednom pohovoru, který nabízel možnost stát se Reserved girl. Ve zkratce se jednalo o...</p>
+					<footer class="post-footer">
+						<div class="left-side">
+							<span class="tag">Featured, Krása</span>
+						</div>
+						<div class="right-side">
+							<a href="single.html" class="go-to-link">Zobrazit příspěvek</a>
+						</div>	
+					</footer>
+				</section>
+			</section>
+
+			<section class="post">
+				<div class="thumb thumb-2">
+					<div class="thumb__hoverlay">
+						<span class="thumb__button">Zobrazit příspěvek</span>
+					</div>
+				</div>
+				<section class="post-card">
+					<h2 class="post-title"><a href="#0">15 tisíc odběratelů na youtube</a></h2>
+					<p class="date">19. Srpen 2016</p>
+					<p class="post-text">Před pár týdny jsem byla na jednom pohovoru, který nabízel možnost stát se Reserved girl. Ve zkratce se jednalo o...</p>
+					<footer class="post-footer">
+						<div class="left-side">
+							<span class="tag">Featured, Krása</span>
+						</div>
+						<div class="right-side">
+							<a href="#" class="go-to-link">Zobrazit příspěvek</a>
+						</div>	
+					</footer>
+				</section>
+			</section>
+
+			<section class="post">
+				<div class="thumb thumb-3">
+					<div class="thumb__hoverlay">
+						<span class="thumb__button">Zobrazit příspěvek</span>
+					</div>
+				</div>
+				<section class="post-card">
+					<h2 class="post-title"><a href="#0">Jak se starám o vlasy aka Nadpis který se tahne na dva řádky</a></h2>
+					<p class="date">19. Srpen 2016</p>
+					<p class="post-text">Před pár týdny jsem byla na jednom pohovoru, který nabízel možnost stát se Reserved girl. Ve zkratce se jednalo o...</p>
+					<footer class="post-footer">
+						<div class="left-side">
+							<span class="tag">Featured, Krása</span>
+						</div>
+						<div class="right-side">
+							<a href="#" class="go-to-link">Zobrazit příspěvek</a>
+						</div>	
+					</footer>
+				</section>
+			</section>
+
+			<section class="post">
+				<div class="thumb thumb-4">
+					<div class="thumb__hoverlay">
+						<span class="thumb__button">Zobrazit příspěvek</span>
+					</div>
+				</div>
+				<section class="post-card">
+					<h2 class="post-title"><a href="#0">Calvin Klein Down Town</a></h2>
+					<p class="date">19. Srpen 2016</p>
+					<p class="post-text">Před pár týdny jsem byla na jednom pohovoru, který nabízel možnost stát se Reserved girl. Ve zkratce se jednalo o správu sociálních sítí značky Reserved, která dělá oblečení a jiné takové věci</p>
+					<footer class="post-footer">
+						<div class="left-side">
+							
+							<span class="tag">Featured</span>
+						</div>
+						<div class="right-side">
+							<a href="#" class="go-to-link">Zobrazit příspěvek</a>
+						</div>	
+					</footer>
+				</section>
+			</section>
+
+			<section class="post">
+				<div class="thumb thumb-5">
+					<div class="thumb__hoverlay">
+						<span class="thumb__button">Zobrazit příspěvek</span>
+					</div>
+				</div>
+				<section class="post-card">
+					<h2 class="post-title"><a href="#0">Calvin Klein Down Town</a></h2>
+					<p class="date">19. Srpen 2016</p>
+					<p class="post-text">Před pár týdny jsem byla na jednom pohovoru, který nabízel možnost stát se Reserved girl. Ve zkratce se jednalo o správu sociálních sítí značky Reserved, která dělá oblečení a jiné takové věci</p>
+					<footer class="post-footer">
+						<div class="left-side">
+							
+							<span class="tag">Featured</span>
+						</div>
+						<div class="right-side">
+							<a href="#" class="go-to-link">Zobrazit příspěvek</a>
+						</div>	
+					</footer>
+				</section>
 			</section>
 		</section>
 
-		<section class="post">
-			<div class="thumb thumb-2"></div>
-			<section class="post-card">
-				<h2 class="post-title">15 tisíc odběratelů na youtube</h2>
-				<p class="date">19. Srpen 2016</p>
-				<p class="post-text">Před pár týdny jsem byla na jednom pohovoru, který nabízel možnost stát se Reserved girl. Ve zkratce se jednalo o...</p>
-				<footer class="post-footer">
-					<div class="left-side">
-						<span class="tag">Featured | Krása</span>
-					</div>
-					<div class="right-side">
-						<a href="#" class="go-to-link">Zobrazit příspěvek</a>
-					</div>	
-				</footer>
-			</section>
-		</section>
+		<div id="menu-slide">
 
-		<section class="post">
-			<div class="thumb thumb-3"></div>
-			<section class="post-card">
-				<h2 class="post-title">Jak se starám o vlasy aka Nadpis který se tahne na dva řádky</h2>
-				<p class="date">19. Srpen 2016</p>
-				<p class="post-text">Před pár týdny jsem byla na jednom pohovoru, který nabízel možnost stát se Reserved girl. Ve zkratce se jednalo o...</p>
-				<footer class="post-footer">
-					<div class="left-side">
-						<span class="tag">Featured | Krása</span>
-					</div>
-					<div class="right-side">
-						<a href="#" class="go-to-link">Zobrazit příspěvek</a>
-					</div>	
-				</footer>
-			</section>
-		</section>
+			<button class="menu-slide__closeBtn menu-button--activated" id="menu-button-close">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 
-		<section class="post">
-			<div class="thumb thumb-4"></div>
-			<section class="post-card">
-				<h2 class="post-title">Calvin Klein Down Town</h2>
-				<p class="post-text">Před pár týdny jsem byla na jednom pohovoru, který nabízel možnost stát se Reserved girl. Ve zkratce se jednalo o správu sociálních sítí značky Reserved, která dělá oblečení a jiné takové věci</p>
-				<footer class="post-footer">
-					<div class="left-side">
-						<span class="date">19. Srpen 2016</span>
-						<span class="tag">Featured</span>
-					</div>
-					<div class="right-side">
-						<a href="#" class="go-to-link">Zobrazit příspěvek</a>
-					</div>	
-				</footer>
-			</section>
-		</section>
+			<aside class="right-sidebar" id="menuSlideSidebar">
 
-		<section class="post">
-			<div class="thumb thumb-5"></div>
-			<section class="post-card">
-				<h2 class="post-title">Calvin Klein Down Town</h2>
-				<p class="post-text">Před pár týdny jsem byla na jednom pohovoru, který nabízel možnost stát se Reserved girl. Ve zkratce se jednalo o správu sociálních sítí značky Reserved, která dělá oblečení a jiné takové věci</p>
-				<footer class="post-footer">
-					<div class="left-side">
-						<span class="date">19. Srpen 2016</span>
-						<span class="tag">Featured</span>
+				<div class="search-form">
+					<input id="search-form" type="text" name="search">
+					<label for="search-form">Co vás zajímá?</label>
+				</div>
+
+				<section class="about">
+					<div class="profile-pic">
+
 					</div>
-					<div class="right-side">
-						<a href="#" class="go-to-link">Zobrazit příspěvek</a>
-					</div>	
-				</footer>
-			</section>
-		</section>
+					<h3>Simi</h3>
+					<p>Ing. Simona Brabcová, instruktorka Body&Mind a rekvalifikovaná výživová poradkyně. Neoficiálně Simi, která miluje zdravý životní styl, cvičení a inspirující lidi okolo sebe ♥</p>
+					<a href="#0">více o mně</a>
+				</section>
+				<section class="tags">
+					<h3>Štítky</h3>
+					<ul class="secondary-nav__tags">
+						<li><a href="#0">Běh</a></li>
+						<li><a href="#0">Co je nového</a></li>
+						<li><a href="#0">Detox</a></li>
+						<li><a href="#0">Dieta</a></li>
+						<li><a href="#0">Featured</a></li>
+						<li><a href="#0">Fotky</a></li>
+						<li><a href="#0">Hubnutí</a></li>
+						<li><a href="#0">Inspirace</a></li>
+						<li><a href="#0">Jak být štastný</a></li>
+						<li><a href="#0">Jóga</a></li>
+						<li><a href="#0">Knihy</a></li>
+						<li><a href="#0">Motivace</a></li>
+						<li><a href="#0">Můj názor na...</a></li>
+						<li><a href="#0">Posilování</a></li>
+						<li><a href="#0">Raw</a></li>
+						<li><a href="#0">Recepty</a></li>
+					</ul>
+				</section>
+				<section class="archive">
+					<h3>Archív</h3>
+				</section>
+
+				<div class="social-aside">
+					<ul class="social-aside__link-holder">
+						<li><a href="#0" title="youtube"><i></i><span>YouTube</span></a></li>
+						<li><a href="#0" title="facebook"><span>Facebook</span><i></i></a></li>
+						<li><a href="#0" title="instagram"><span>Instagram</span><i></i></a></li>
+						<li><a href="#0" title="snapchat"><span>Snapchat</span><i></i></a></li>
+						<li><a href="#0" title="twitter"><span>Twitter</span><i></i></a></li>
+						<li><a href="#0" title="askFm"><span>AskFM</span><i></i></a></li>
+						<li><a href="#0" title="google+"><span>Google+</span><i></i></a></li>
+					</ul>
+				</div>
+
+			</aside>
+		</div>
+	</main>
+
+	<section class="partners">
+		<p>Partneři</p>
 	</section>
 
-	<aside class="right-sidebar">
-		<section class="about">
-			<div class="profile-pic">
+</div> 
 
-			</div>
-			<h3>Simi</h3>
-			<p>Ing. Simona Brabcová, instruktorka Body&Mind a rekvalifikovaná výživová poradkyně. Neoficiálně Simi, která miluje zdravý životní styl, cvičení a inspirující lidi okolo sebe ♥</p>
-			<a href="#0">více o mně</a>
-		</section>
-		<section class="tags">
-			<h3>Archív</h3>
-		</section>
-		<section class="adverts"></section>
-	</aside>
+<script src="./scripts/jquery-3.1.1.min.js"></script>
 
-	<aside class="social-aside">
-		<ul class="social-aside__link-holder">
-			<li><a href="#0"><span>YouTube</span><i></i></a></li>
-			<li><a href="#0"><span>Facebook</span><i></i></a></li>
-			<li><a href="#0"><span>Instagram</span><i></i></a></li>
-			<li><a href="#0"><span>Snapchat</span><i></i></a></li>
-			<li><a href="#0"><span>Twitter</span><i></i></a></li>
-			<li><a href="#0"><span>AskFM</span><i></i></a></li>
-			<li><a href="#0"><span>Google+</span><i></i></a></li>
-		</ul>
-	</aside>
+<script>
 
-	<script src="./scripts/jquery-3.1.1.min.js"></script>
-	<script src="./scripts/custom.js"></script>
-</main>
+	var $menuButton = $('#menu-button');
+	var $menuButtonClose = $('#menu-button-close')
+	var $menuSlide = $('#menu-slide');
+	var $menuSlideSidebar = $('#menuSlideSidebar');
+	var $body = $('body');
 
-<section class="partners">
-	<p>Partneři</p>
-</section>
+	// Hide Header on on scroll down
+	var didScroll;
+	var lastScrollTop = 0;
+	var delta = 5;
+	var $siteHeader = $('#site-header');
+	var navbarHeight = $siteHeader.outerHeight();
+
+	function slideMenuOpen() {
+		$menuSlide.fadeIn(200, function(){
+			$body.addClass('menu-opened');
+			$(this).addClass('menu-slide--activated');
+		});	
+	}
+
+	function slideMenuClose() {
+		if (!$(event.target).closest($menuSlideSidebar).length) {
+			$(this).removeClass('menu-slide--activated').fadeOut(200);
+			$body.removeClass('menu-opened');
+		}		
+	}
+
+	function hasScrolled() {
+	    var st = $(this).scrollTop();
+	    // Make sure they scroll more than delta
+	    if(Math.abs(lastScrollTop - st) <= delta)
+	        return;
+	    
+	    // If they scrolled down and are past the navbar, add class .nav-up.
+	    // This is necessary so you never see what is "behind" the navbar.
+	    if (st > 500) {
+			$siteHeader.addClass('site-header--pos-fixed');
+
+		    if (st > lastScrollTop && st > navbarHeight){
+		        // Scroll Down
+		        $siteHeader.removeClass('nav-down').addClass('nav-up');
+		    } else {
+		        // Scroll Up
+		        if(st + $(window).height() < $(document).height()) {
+		            $siteHeader.removeClass('nav-up').addClass('nav-down');
+		        }
+		    }
+		} else {
+			$siteHeader.removeClass('site-header--pos-fixed');
+			$siteHeader.removeClass('nav-up nav-down');
+		}
+		    
+	    lastScrollTop = st;
+	}
+
+	var IntervalTicker = false;
+	var checkingForScroll;
+
+	$(window).scroll(function(event){
+	    didScroll = true;
+	});
+
+	$(window).on('load resize', function() {
+
+
+		if (window.matchMedia('(max-width: 1350px)').matches) {
+
+			if (!$menuSlide.hasClass('menu-slide--js')) {
+				$menuSlide.addClass('menu-slide--js');
+				$menuButton.on('click', slideMenuOpen).fadeIn();
+				$menuSlide.on('click', slideMenuClose);
+			}
+
+			if (IntervalTicker === false) {
+				checkingForScroll = setInterval(function() {
+					    if (didScroll) {
+					        hasScrolled();
+					        didScroll = false;
+					    }
+					}, 250);
+				IntervalTicker = true;
+			}		
+		} else {
+			$body.removeClass('menu-opened');
+			$menuSlide.css('display', '').removeClass('menu-slide--js menu-slide--activated').off('click', slideMenuClose).fadeIn();
+			$menuButton.off('click', slideMenuOpen).fadeOut();
+			clearInterval(checkingForScroll);
+			$siteHeader.removeClass('site-header--pos-fixed');
+			$siteHeader.removeClass('nav-up nav-down');		
+			IntervalTicker = false;
+		}
+	})
+</script>
+<script src="./scripts/custom.js"></script>
+
 </body>
 </html>
