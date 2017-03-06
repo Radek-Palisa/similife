@@ -1,16 +1,70 @@
 .site-header
-	position: relative
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
 	z-index: 5
+	display: flex
+	flex-wrap: wrap
 	padding: 10px 0
 	background-color: white 
 
+.site-header--pos-fixed
+	z-index: 95
+	position: fixed
+	left: 0
+	right: 0
+	top: -61px
+	height: 61px
+	padding: 5px 0
+	justify-content: space-between
+	border-bottom: 1px solid #c5d2d2
+	
+	.site-branding
+		width: 100px
+		height: 50px
+		margin: 0 0 0 10px
+
+	.site-navigation
+		width: auto
+		order: 1
+
+		&::before, &::after
+			background-image: none
+
+		> span 	
+			font-size: 11px
+
+		> span + span 
+			margin-left: 15px
+
+	.menu-button
+		margin-left: 0
+
+		> span 	
+			width: 26px
+			height: 3px
+			border-radius: 15%
+
+		> span:nth-of-type(2)
+			margin: 4px 0
+
+.site-header.nav-up
+	transform: translateY(0)
+	transition: transform 0.3s linear
+
+.site-header.nav-down
+	transform: translateY(100%)
+	transition: transform 0.3s linear
+
 .site-navigation
+	order: 3
+	width: 100%
 	position: relative
 	display: flex
 	justify-content: center
 	align-items: center
 	text-align: center
-	margin: 0 8px
 	//border-top: 1px solid #e5efef
 	//border-bottom: 1px solid #e5efef
 
@@ -18,7 +72,7 @@
 		content: ''
 		position: absolute 	
 		height: 1px
-		width: calc(100% - 72px)
+		width: 100%
 		background-image: linear-gradient(90deg, #d4dcdc, #c5d2d2, #d4dcdc)
 		
 	&::before
@@ -37,10 +91,14 @@
 		font-weight: 500
 		text-transform: uppercase
 
+		&:hover 
+			color: black
+
 	span + span 
 		margin-left: 20px
 
 .site-branding
+	order: 1
 	width: 200px
 	height: 120px
 	margin: 0 auto
@@ -61,6 +119,32 @@
 		letter-spacing: 4px
 		color: white
 		padding: 0
+
+.menu-button
+	order: 2
+	width: 45px
+	margin-left: -65px
+	margin-right: 20px
+	padding: 8px
+	outline: 0
+	border: 0
+	background: none
+	box-shadow: none
+
+	&:focus
+		box-shadow: initial
+		border: 0
+
+	> span
+		display: block
+		width: 30px
+		height: 3px
+		background-color: #97bfbf
+		border-radius: 15%
+
+	> span:nth-of-type(2)
+		margin: 6px 0
+
 
 .banner
 	position: fixed
